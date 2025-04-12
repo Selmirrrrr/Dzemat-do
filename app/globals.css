@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Palette moderne et lumineuse */
+    --primary: 175 65% 35%; /* Turquoise/teal - couleur islamique traditionnelle modernisée */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 87% 55%; /* Or/jaune - rappel des dorures des mosquées */
+    --secondary-foreground: 210 40% 98%;
+
+    /* Couleur d'accent */
+    --accent-blue: 210 100% 50%; /* Bleu vif pour certains accents */
+    --accent-green: 142 76% 36%; /* Vert islamique traditionnel */
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 175 65% 95%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 175 65% 35%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 175 65% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 87% 55%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 175 65% 30%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 175 65% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* Custom font variables */
+  .font-heading {
+    font-family: var(--font-montserrat);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Motifs islamiques */
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2317a89a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .islamic-pattern-2 {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23eab308' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Éléments décoratifs */
+  .decorative-circle {
+    @apply absolute rounded-full opacity-10;
+  }
+
+  /* Cartes modernes */
+  .card-modern {
+    @apply rounded-lg border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* Effets de transition */
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Conteneur avec bordure subtile */
+  .subtle-border {
+    @apply border border-border rounded-lg p-6;
+  }
+
+  /* Conteneur avec fond subtil */
+  .subtle-bg {
+    @apply bg-muted rounded-lg p-6;
+  }
+
+  /* Sections alternées */
+  .section-alt {
+    @apply bg-muted;
+  }
+
+  /* Arche islamique */
+  .islamic-arch {
+    position: relative;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    overflow: hidden;
+  }
+
+  /* Bordure décorative */
+  .decorative-border {
+    position: relative;
+  }
+
+  .decorative-border::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+  }
+
+  /* Gradient islamique */
+  .islamic-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent-blue)));
+  }
+
+  /* Bouton avec effet de brillance */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+    transform: rotate(30deg);
+    transition: transform 0.5s;
+  }
+
+  .btn-shine:hover::after {
+    transform: rotate(30deg) translate(10%, 10%);
+  }
+
+  /* Couleurs spécifiques */
+  .text-gold {
+    color: hsl(var(--secondary));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--secondary));
+  }
+
+  .text-teal {
+    color: hsl(var(--primary));
+  }
+
+  .bg-teal {
+    background-color: hsl(var(--primary));
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "last_updated": "2025-04-11 20:19:07",
+  "source": "https://mawaqit.net/fr/dzematlozana",
+  "Fajr": {
+    "time": "05:02",
+    "iqama": "06:02",
+    "iqama_minutes": "60"
+  },
+  "Sunrise": "06:46",
+  "Dhuhr": {
+    "time": "13:40",
+    "iqama": "13:45",
+    "iqama_minutes": "5"
+  },
+  "Asr": {
+    "time": "17:22",
+    "iqama": "17:27",
+    "iqama_minutes": "5"
+  },
+  "Maghrib": {
+    "time": "20:24",
+    "iqama": "20:27",
+    "iqama_minutes": "3"
+  },
+  "Isha": {
+    "time": "21:54",
+    "iqama": "21:59",
+    "iqama_minutes": "5"
+  },
+  "Jumua": "13:40"
+}
